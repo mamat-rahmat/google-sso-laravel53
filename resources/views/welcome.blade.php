@@ -71,8 +71,8 @@
     <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
             <div class="top-right links">
-                <strong>Hello, {{ Auth::user()->name }}</strong>
                 @if (Auth::check())
+                    <strong>Hello, {{ Auth::user()->name }}</strong>
                     <a href="{{ url('/home') }}">Home</a>
                 @else
                     <a href="{{ url('/login') }}">Login</a>
